@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from gtts import gTTS  # Biblioteca para converter texto em áudio
 from st_audiorec import st_audiorec  # Biblioteca para gravação de áudio no Streamlit
 
-__import__('pysqlite3')
+#__import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
