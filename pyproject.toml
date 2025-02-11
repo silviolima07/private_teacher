@@ -1,0 +1,18 @@
+[project]
+name = "teacher"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "crewai>=0.100.0",
+    "gtts>=2.5.4",
+    "litellm>=1.57.4",
+    "openai-whisper>=20240930",
+    "python-dotenv>=1.0.1",
+    "sounddevice>=0.5.1",
+    "streamlit>=1.41.1",
+    "torch>=2.6.0",
+    "wavio>=0.0.9",
+    "whisper>=1.1.10",
+]
