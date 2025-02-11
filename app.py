@@ -9,7 +9,7 @@ from st_audiorec import st_audiorec  # Biblioteca para gravação de áudio no S
 
 #__import__('pysqlite3')
 import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+#sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # Carregar variáveis de ambiente
 load_dotenv()
