@@ -146,7 +146,12 @@ if num_msg > 0:
     st.subheader("📝 Histórico da Conversa")
     for msg in st.session_state.conversation_history[::-1]:
         if "user" in msg:
-            st.write(f"**🗣️ Você:** {msg['user']}")
+            # st.write(f"**🗣️ Você:** {msg['user']}")
+            st.markdown("#### 🗣️ Você:")
+            st.markdown(
+                         f"<div style='font-size: 20px;'>{msg['user']}</div>",
+                          unsafe_allow_html=True
+                        )
         else:
             #st.write(f"**🧑‍🏫 Teacher:** {msg['bot']}")
             st.markdown('#### 🧑‍🏫 Teacher:')
