@@ -150,6 +150,7 @@ if num_msg > 0:
             st.write(f"**🧑‍🏫 Teacher:** {msg['bot']}")
             
 else:
-    st.sidebar.markdown("#### 1) Inicie o bate-papo com Start Recording")
-    st.sidebar.markdown("#### 2) Ao final clique Stop")
-    st.sidebar.markdown('#### 3) Um agente como professor de inglês irá falar contigo.')    
+    st.subheader(" Apenas 3 passos")
+    st.markdown("#### 1) Inicie o bate-papo com Start Recording")
+    st.markdown("#### 2) Ao final clique Stop")
+    st.markdown('#### 3) Um agente como professor de inglês irá falar contigo.')    
