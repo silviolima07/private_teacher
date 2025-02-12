@@ -106,12 +106,36 @@ with col2:
     
 with col1:
     st.image(Image.open('img/aprender.png'))    
+
     
 
 # Botão para processar o áudio gravado
 if audio_data is not None:
-    if st.button("⏹️ Processar Áudio"):
-        process_audio_data(audio_data)
+    #if st.button("⏹️ Processar Áudio"):
+    #    process_audio_data(audio_data)
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmpfile:
+        tmpfile.write(audio_data)
+        audio_file = tmpfile.name
+        #st.audio(audio_file)  # Reproduzir o áudio gravado
+
+    # Transcrição do áudio
+    model = whisper.load_model("base")
+    result = model.transcribe(audio_file)
+    transcribed_text = result["text"]
+
+    st.session_state.conversation_history.append({"user": transcribed_text})
+    st.success("🎧 Audio -> Texto: Transcricao  concluida!")
+
+    if transcribed_text.strip():
+        send_to_agent()
+    else:
+        st.error("Não foi possível transcrever o áudio. Tente novamente.")
+
+    os.unlink(audio_file)
+        
+        
+        
+        
 
 # Mostrar histórico da conversa
 st.subheader("📝 Histórico da Conversa")
