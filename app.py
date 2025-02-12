@@ -124,12 +124,13 @@ if audio_data is not None:
     model = whisper.load_model("base")
     result = model.transcribe(audio_file)
     transcribed_text = result["text"]
+    if transcribed_text != '':
 
-    st.session_state.conversation_history.append({"user": transcribed_text})
-    st.success("🎧 Audio -> Texto: Transcricao  concluida!")
+        st.session_state.conversation_history.append({"user": transcribed_text})
+        st.success("🎧 Audio -> Texto: Transcricao  concluida!")
 
-    if transcribed_text.strip():
-        send_to_agent()
+        if transcribed_text.strip():
+            send_to_agent()
     else:
         st.error("Não foi possível transcrever o áudio. Tente novamente.")
 
