@@ -150,7 +150,12 @@ if num_msg > 0:
         else:
             #st.write(f"**🧑‍🏫 Teacher:** {msg['bot']}")
             st.markdown('#### 🧑‍🏫 Teacher:')
-            st.markdown('#### '+ f'{msg['bot']}')
+            #st.markdown('#### '+ f'{msg['bot']}')
+            # Aumentar o tamanho da fonte usando HTML
+            st.markdown(
+                         f"<div style='font-size: 20px;'>{msg['bot']}</div>",
+                          unsafe_allow_html=True
+                        )
             
 else:
     st.subheader(" Apenas 3 passos")
