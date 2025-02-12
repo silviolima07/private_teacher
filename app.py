@@ -40,6 +40,7 @@ def process_audio_data(audio_data):
 
     if transcribed_text.strip():
         send_to_agent()
+        os.unlink(audio_file)
     else:
         st.error("Não foi possível transcrever o áudio. Tente novamente.")
 
