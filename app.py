@@ -6,6 +6,7 @@ from crewai import Agent, Task, Crew
 from dotenv import load_dotenv
 from gtts import gTTS  # Biblioteca para converter texto em áudio
 from st_audiorec import st_audiorec  # Biblioteca para gravação de áudio no Streamlit
+from PIL import Image
 
 #__import__('pysqlite3')
 import sys
@@ -96,9 +97,15 @@ html_page_title = """
 """               
 st.markdown(html_page_title, unsafe_allow_html=True)
 
+col1,col2 = st.columns(2)
 
-# Usar st_audiorec para capturar áudio
-audio_data = st_audiorec()
+with col2:
+    # Usar st_audiorec para capturar áudio
+    audio_data = st_audiorec()
+    
+with col1:
+    st.image(Image.open('img/aprender.png'))    
+    
 
 # Botão para processar o áudio gravado
 if audio_data is not None:
