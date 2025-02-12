@@ -152,4 +152,4 @@ if num_msg > 0:
 else:
     st.markdown("Inicie o bate-papo com Start Recording"
     st.markdown("Ao final clique Stop")
-    st.markdown("Um agente como professor de inglês irá falar contigo.")    
+    st.markdown('Um agente como professor de inglês irá falar contigo.')    
