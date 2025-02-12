@@ -30,7 +30,7 @@ def process_audio_data(audio_data):
         #st.audio(audio_file)  # Reproduzir o áudio gravado
 
     # Transcrição do áudio
-    model = whisper.load_model("small")
+    model = whisper.load_model("base")
     result = model.transcribe(audio_file)
     transcribed_text = result["text"]
 
