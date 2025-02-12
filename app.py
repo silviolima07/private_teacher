@@ -141,7 +141,7 @@ if audio_data is not None:
 
 # Mostrar histórico da conversa
 st.subheader("📝 Histórico da Conversa")
-for msg in st.session_state.conversation_history[::-1:
+for msg in st.session_state.conversation_history[::-1]:
     if "user" in msg:
         st.write(f"**🗣️ Você:** {msg['user']}")
     else:
