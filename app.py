@@ -88,7 +88,14 @@ def generate_audio(text):
     #st.audio(audio_path, format="audio/mp3")
 
 # Interface Streamlit
-st.title("🎙️ Chatbot Teacher - Fale e Aprenda Inglês")
+#st.title("🎙️ Chatbot Teacher - Fale e Aprenda Inglês")
+html_page_title = """
+<div style="background-color:black;padding=60px">
+        <p style='text-align:center;font-size:60px;font-weight:bold; color:red'>🎙️ Chatbot Teacher </p>
+</div>
+"""               
+st.markdown(html_page_title, unsafe_allow_html=True)
+
 
 # Usar st_audiorec para capturar áudio
 audio_data = st_audiorec()
