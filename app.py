@@ -81,7 +81,7 @@ def send_to_agent():
 
 # Função para gerar e reproduzir áudio da resposta do professor
 def generate_audio(text):
-    st.write("Tacher speeking...")
+    st.write("Teacher speeking...")
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmpfile:
         tts = gTTS(text, lang="en")
         tts.save(tmpfile.name)
@@ -141,7 +141,7 @@ if audio_data is not None:
 
 # Mostrar histórico da conversa
 st.subheader("📝 Histórico da Conversa")
-for msg in st.session_state.conversation_history:
+for msg in st.session_state.conversation_history[::-1:
     if "user" in msg:
         st.write(f"**🗣️ Você:** {msg['user']}")
     else:
