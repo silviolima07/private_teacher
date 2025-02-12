@@ -80,6 +80,7 @@ def send_to_agent():
 
 # Função para gerar e reproduzir áudio da resposta do professor
 def generate_audio(text):
+    st.write("Tacher speeking...")
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmpfile:
         tts = gTTS(text, lang="en")
         tts.save(tmpfile.name)
