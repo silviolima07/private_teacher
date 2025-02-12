@@ -149,7 +149,7 @@ if num_msg > 0:
             st.write(f"**🗣️ Você:** {msg['user']}")
         else:
             st.write(f"**🧑‍🏫 Teacher:** {msg['bot']}")
-            st.markdown('#### '+ f'{msg['bot']})
+            st.markdown('#### '+ f'{msg['bot']}')
             
 else:
     st.subheader(" Apenas 3 passos")
