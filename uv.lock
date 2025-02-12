@@ -602,6 +602,12 @@ wheels = [
 ]
 
 [[package]]
+name = "ffmpeg"
+version = "1.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f0/cc/3b7408b8ecf7c1d20ad480c3eaed7619857bf1054b690226e906fdf14258/ffmpeg-1.4.tar.gz", hash = "sha256:6931692c890ff21d39938433c2189747815dca0c60ddc7f9bb97f199dba0b5b9", size = 5055 }
+
+[[package]]
 name = "filelock"
 version = "3.17.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2559,6 +2565,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "bokeh" },
     { name = "crewai" },
+    { name = "ffmpeg" },
     { name = "gtts" },
     { name = "litellm" },
     { name = "openai-whisper" },
@@ -2574,6 +2581,7 @@ dependencies = [
 requires-dist = [
     { name = "bokeh", specifier = ">=3.6.3" },
     { name = "crewai", specifier = ">=0.100.0" },
+    { name = "ffmpeg", specifier = ">=1.4" },
     { name = "gtts", specifier = ">=2.5.4" },
     { name = "litellm", specifier = ">=1.57.4" },
     { name = "openai-whisper", specifier = ">=20240930" },
