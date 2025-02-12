@@ -86,10 +86,11 @@ def generate_audio(text):
         audio_path = tmpfile.name
 
     # Exibir o player de áudio
-    #st.audio(audio_path, format="audio/mp3")
+    st.audio(audio_path, format="audio/mp3")
 
 # Interface Streamlit
 #st.title("🎙️ Chatbot Teacher - Fale e Aprenda Inglês")
+
 html_page_title = """
 <div style="background-color:black;padding=60px">
         <p style='text-align:center;font-size:60px;font-weight:bold; color:red'>🎙️ Chatbot Teacher </p>
