@@ -137,12 +137,14 @@ if audio_data is not None:
         
         
         
-        
+# Verificar se há mensagens já enviadas        
+n_msg = len(st.session_state.conversation_history[::-1])
 
-# Mostrar histórico da conversa
-st.subheader("📝 Histórico da Conversa")
-for msg in st.session_state.conversation_history[::-1]:
-    if "user" in msg:
-        st.write(f"**🗣️ Você:** {msg['user']}")
-    else:
-        st.write(f"**🧑‍🏫 Teacher:** {msg['bot']}")
+if n_mg > 0:
+    # Mostrar histórico da conversa
+    st.subheader("📝 Histórico da Conversa")
+    for msg in st.session_state.conversation_history[::-1]:
+        if "user" in msg:
+            st.write(f"**🗣️ Você:** {msg['user']}")
+        else:
+            st.write(f"**🧑‍🏫 Teacher:** {msg['bot']}")
