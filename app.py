@@ -10,9 +10,9 @@ from PIL import Image
 from io import BytesIO
 import base64
 
-#__import__('pysqlite3')
+__import__('pysqlite3')
 import sys
-#sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -104,7 +104,7 @@ def send_to_agent(lang, agente, acao1, acao2 ):
     )
 
     task = Task(
-        description=f"Continue essa conversa:\n\n{conversation_text}\n\nResponda educadamente e de forma clara e sucinta.",
+        description=f"Responda no idioma {idioma}.Continue essa conversa:\n\n{conversation_text}\n\nResponda educadamente e de forma clara e sucinta.",
         expected_output="Uma resposta coerente com o contexto, incluindo explicações gramaticais se necessário.",
         agent=teacher
     )
