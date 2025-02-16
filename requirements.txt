@@ -11,4 +11,4 @@ whisper== 1.1.10
 numpy<=2.1
 crewai==0.86.0
 groq==0.13.0
-pysqlite3-binary
+pysqlite3-binary==0.5.4
