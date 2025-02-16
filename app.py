@@ -23,7 +23,7 @@ load_dotenv()
 # Definir modelo da GROQ
 llm = "groq/llama3-8b-8192"
 
-st.markdown(### TESTE')
+st.markdown('### TESTE')
 # Estado global para armazenar conversa
 if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = []
