@@ -181,7 +181,7 @@ st.sidebar.image(Image.open('img/microfones.png'))
 
 # Dicionário de idiomas
 idiomas = {
-    "Português": {'lang': 'pt',"start": "Iniciar Gravação", "stop": "Parar Gravação", 'reset':'Reiniciar', 'download': 'Baixar', 'agente':'Professor','acao1':'pensando...', 'acao2': 'respondendo'},
+    #"Português": {'lang': 'pt',"start": "Iniciar Gravação", "stop": "Parar Gravação", 'reset':'Reiniciar', 'download': 'Baixar', 'agente':'Professor','acao1':'pensando...', 'acao2': 'respondendo'},
     "English": {'lang':'en',"start": "Start", "stop": "Stop",'reset': 'Reset', 'download': 'Download', 'agente':'Teacher', 'acao1':'thinking...', 'acao2': 'speeking'},
     "Español": {'lang':'es', "start": "Comenzar Grabación", "stop": "Detener Grabación", 'reset': 'Reiniciar', 'download': 'Bajar', 'agente':'Maestro', 'acao1': 'piensando...', 'acao2':'hablando' },
 }
