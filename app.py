@@ -11,8 +11,8 @@ from PIL import Image
 # https://github.com/stefanrmmr/streamlit-audio-recorder
 
 #__import__('pysqlite3')
-#import sys
-#sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # Carregar variáveis de ambiente
 load_dotenv()
