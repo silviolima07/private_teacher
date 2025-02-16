@@ -128,13 +128,10 @@ def send_to_agent(lang, agente, acao1, acao2 ):
 # Função para gerar e reproduzir áudio da resposta do professor
 def generate_audio(lang, text, agente, acao):
     st.markdown(f"### {agente} {acao}") # Respondendo ao aluno
-    st.write('Salvando...')
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmpfile:
-        st.write("Text to Speech")
+        #st.write("Text to Speech")
         tts = gTTS(text, lang=lang)
-        st.write('...salvando...')
         tts.save(tmpfile.name)
-        st.write('Salvo')
         audio_path = tmpfile.name
 
     # Exibir o player de áudio
