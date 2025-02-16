@@ -2,6 +2,7 @@ import streamlit as st
 import whisper
 import tempfile
 import os
+"""
 from crewai import Agent, Task, Crew
 from dotenv import load_dotenv
 from gtts import gTTS  # Biblioteca para converter texto em áudio
@@ -14,12 +15,15 @@ from PIL import Image
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
+"""
+
 # Carregar variáveis de ambiente
 load_dotenv()
 
 # Definir modelo da GROQ
 llm = "groq/llama3-8b-8192"
 
+st.markdown(### TESTE')
 # Estado global para armazenar conversa
 if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = []
