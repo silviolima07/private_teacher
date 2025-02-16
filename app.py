@@ -67,7 +67,7 @@ def process_audio_data(audio_data):
 
     # Transcrição do áudio
     with st.spinner(' 🎧 Audio Transformando audio em texto...'): # Transcricao
-        model = whisper.load_model("base")
+        model = whisper.load_model("small")
         result = model.transcribe(audio_file)
         transcribed_text = result["text"]
 
